@@ -1,0 +1,21 @@
+main:
+    syscall r0 100
+    store r0 x
+    syscall r0 100
+    store r0 y
+    syscall r0 100
+    store r0 z
+    load r1 x
+    load r2 y
+    add r1 r2 0
+    load r3 z
+    add r1 r3 0
+    syscall r1 102
+    lc r0 10
+    syscall r0 105
+    lc r0 0
+    syscall r0 0
+x: word
+y: word
+z: word
+end main
